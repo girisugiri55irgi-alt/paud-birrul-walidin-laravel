@@ -100,9 +100,9 @@
 <nav class="navbar navbar-dark">
     <div class="container">
         <a href="{{ route('orangtua.dashboard') }}" class="navbar-brand fw-bold d-flex align-items-center">
-            <img src="{{ asset('images/logo1.jpeg') }}" alt="Logo TK PAUD Birrul Walidin" class="school-logo"
+            <img src="{{ asset('images/logo1.jpeg') }}" alt="Logo TK PAUD Birrul Walidain" class="school-logo"
                  onerror="this.style.display='none'">
-            <span>TK PAUD Birrul Walidin<br><small class="fw-normal">Portal Orang Tua/Wali</small></span>
+            <span>TK PAUD Birrul Walidain<br><small class="fw-normal">Portal Orang Tua/Wali</small></span>
         </a>
 
         <form action="{{ route('logout') }}" method="POST">
@@ -344,7 +344,7 @@
     </div>
 
     <footer class="text-center text-secondary small py-3">
-        &copy; {{ date('Y') }} TK PAUD Birrul Walidin
+        &copy; {{ date('Y') }} TK PAUD Birrul Walidain
     </footer>
 
 </div>

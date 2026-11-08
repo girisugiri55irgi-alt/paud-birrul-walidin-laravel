@@ -11,7 +11,7 @@
 <nav class="navbar navbar-dark bg-primary">
     <div class="container">
         <a href="{{ route('pengumpulan-tugas.index') }}"
-           class="navbar-brand">TK PAUD Birrul Walidin</a>
+           class="navbar-brand">TK PAUD Birrul Walidain</a>
     </div>
 </nav>
 

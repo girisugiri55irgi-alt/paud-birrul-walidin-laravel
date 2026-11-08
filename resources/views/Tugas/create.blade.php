@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tambah Tugas - TK PAUD Birrul Walidin</title>
+    <title>Tambah Tugas - TK PAUD Birrul Walidain</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -88,9 +88,9 @@
         <a href="{{ route('beranda') }}"
            class="navbar-brand d-flex align-items-center gap-2">
             <img src="{{ asset('images/logo1.jpeg') }}"
-                 alt="Logo TK PAUD Birrul Walidin"
+                 alt="Logo TK PAUD Birrul Walidain"
                  class="logo-sekolah">
-            <span class="fw-bold">TK PAUD Birrul Walidin</span>
+            <span class="fw-bold">TK PAUD Birrul Walidain</span>
         </a>
 
         <a href="{{ route('tugas.index') }}" class="btn btn-light btn-sm">
@@ -231,7 +231,7 @@
 </main>
 
 <footer class="text-center text-secondary py-4">
-    <small>&copy; {{ date('Y') }} TK PAUD Birrul Walidin</small>
+    <small>&copy; {{ date('Y') }} TK PAUD Birrul Walidain</small>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

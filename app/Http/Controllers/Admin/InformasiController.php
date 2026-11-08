@@ -3,63 +3,97 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Informasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class InformasiController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $informasis = Informasi::latest()->paginate(10);
+
+        return view('admin.konten.informasi.index', compact('informasis'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('admin.konten.informasi.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'judul' => 'required|string|max:255',
+            'isi' => 'required|string',
+            'gambar' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'tanggal_publikasi' => 'nullable|date',
+            'is_published' => 'nullable|boolean',
+        ]);
+
+        if ($request->hasFile('gambar')) {
+            $validated['gambar'] = $request->file('gambar')
+                ->store('informasi', 'public');
+        }
+
+        $validated['is_published'] = $request->boolean('is_published');
+        $validated['user_id'] = auth()->id();
+
+        Informasi::create($validated);
+
+        return redirect()
+            ->route('admin.konten.informasi.index')
+            ->with('success', 'Informasi sekolah berhasil ditambahkan.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show(Informasi $informasi)
     {
-        //
+        return redirect()->route('admin.konten.informasi.edit', $informasi);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function edit(Informasi $informasi)
     {
-        //
+        return view('admin.konten.informasi.edit', compact('informasi'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Informasi $informasi)
     {
-        //
+        $validated = $request->validate([
+            'judul' => 'required|string|max:255',
+            'isi' => 'required|string',
+            'gambar' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'tanggal_publikasi' => 'nullable|date',
+            'is_published' => 'nullable|boolean',
+        ]);
+
+        if ($request->hasFile('gambar')) {
+            if ($informasi->gambar) {
+                Storage::disk('public')->delete($informasi->gambar);
+            }
+
+            $validated['gambar'] = $request->file('gambar')
+                ->store('informasi', 'public');
+        }
+
+        $validated['is_published'] = $request->boolean('is_published');
+
+        $informasi->update($validated);
+
+        return redirect()
+            ->route('admin.konten.informasi.index')
+            ->with('success', 'Informasi sekolah berhasil diperbarui.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy(Informasi $informasi)
     {
-        //
+        if ($informasi->gambar) {
+            Storage::disk('public')->delete($informasi->gambar);
+        }
+
+        $informasi->delete();
+
+        return redirect()
+            ->route('admin.konten.informasi.index')
+            ->with('success', 'Informasi sekolah berhasil dihapus.');
     }
 }

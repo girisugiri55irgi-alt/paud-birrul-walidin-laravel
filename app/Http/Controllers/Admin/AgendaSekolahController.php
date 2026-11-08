@@ -3,63 +3,81 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\AgendaSekolah;
 use Illuminate\Http\Request;
 
 class AgendaSekolahController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $agendas = AgendaSekolah::latest('tanggal_mulai')
+            ->paginate(10);
+
+        return view('admin.konten.agenda.index', compact('agendas'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('admin.konten.agenda.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'nullable|string',
+            'tanggal_mulai' => 'required|date',
+            'tanggal_selesai' => 'nullable|date|after_or_equal:tanggal_mulai',
+            'lokasi' => 'nullable|string|max:255',
+            'is_published' => 'nullable|boolean',
+        ]);
+
+        $validated['is_published'] = $request->boolean('is_published');
+        $validated['user_id'] = auth()->id();
+
+        AgendaSekolah::create($validated);
+
+        return redirect()
+            ->route('admin.konten.agenda.index')
+            ->with('success', 'Kegiatan sekolah berhasil ditambahkan.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show(AgendaSekolah $agenda)
     {
-        //
+        return redirect()->route('admin.konten.agenda.edit', $agenda);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function edit(AgendaSekolah $agenda)
     {
-        //
+        return view('admin.konten.agenda.edit', compact('agenda'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, AgendaSekolah $agenda)
     {
-        //
+        $validated = $request->validate([
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'nullable|string',
+            'tanggal_mulai' => 'required|date',
+            'tanggal_selesai' => 'nullable|date|after_or_equal:tanggal_mulai',
+            'lokasi' => 'nullable|string|max:255',
+            'is_published' => 'nullable|boolean',
+        ]);
+
+        $validated['is_published'] = $request->boolean('is_published');
+
+        $agenda->update($validated);
+
+        return redirect()
+            ->route('admin.konten.agenda.index')
+            ->with('success', 'Kegiatan sekolah berhasil diperbarui.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy(AgendaSekolah $agenda)
     {
-        //
+        $agenda->delete();
+
+        return redirect()
+            ->route('admin.konten.agenda.index')
+            ->with('success', 'Kegiatan sekolah berhasil dihapus.');
     }
 }

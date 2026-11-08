@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Materi Pembelajaran - PAUD Birrul Walidin</title>
+    <title>Materi Pembelajaran - PAUD Birrul Walidain</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet">
@@ -13,7 +13,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
         <a class="navbar-brand" href="{{ route('beranda') }}">
-            PAUD Birrul Walidin
+            PAUD Birrul Walidain
         </a>
 
         <div class="ms-auto d-flex gap-2">
@@ -38,7 +38,7 @@
     <h1 class="mb-2">Materi Pembelajaran</h1>
 
     <p class="text-muted mb-4">
-        Materi belajar anak PAUD Birrul Walidin.
+        Materi belajar anak PAUD Birrul Walidain.
     </p>
 
     <div class="row g-4">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Tugas Anak - TK PAUD Birrul Walidin</title>
+    <title>Tugas Anak - TK PAUD Birrul Walidain</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet">
@@ -115,22 +115,22 @@
 {{-- Navigasi utama --}}
 <nav class="navbar navbar-dark navbar-biru shadow-sm">
     <div class="container">
-        <a href="{{ route('beranda') }}"
+        <a href="{{ route('pendidik.dashboard') }}"
            class="navbar-brand d-flex align-items-center gap-2">
 
             <img src="{{ asset('images/logo1.jpeg') }}"
-                 alt="Logo TK PAUD Birrul Walidin"
+                 alt="Logo TK PAUD Birrul Walidain"
                  class="logo-sekolah">
 
             <span class="fw-bold">
-                TK PAUD Birrul Walidin
+                TK PAUD Birrul Walidain
             </span>
         </a>
 
-        <a href="{{ route('beranda') }}"
+        <a href="{{ route('pendidik.dashboard') }}"
            class="btn btn-light btn-sm">
             <i class="bi bi-house-door me-1"></i>
-            Beranda
+            dashboard
         </a>
     </div>
 </nav>
@@ -371,7 +371,7 @@
 
 <footer class="text-center py-4">
     <small>
-        &copy; {{ date('Y') }} TK PAUD Birrul Walidin
+        &copy; {{ date('Y') }} TK PAUD Birrul Walidain
     </small>
 </footer>
 

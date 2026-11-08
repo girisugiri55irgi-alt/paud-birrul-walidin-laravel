@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SPMB Online - PAUD Birrul Walidin</title>
+    <title>SPMB Online - PAUD Birrul Walidain</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -41,7 +41,7 @@
 
 <header class="header">
     <h2>SPMB Online</h2>
-    <h4>PAUD Birrul Walidin</h4>
+    <h4>PAUD Birrul Walidain</h4>
     <p class="mb-0">Sistem Penerimaan Murid Baru</p>
 </header>
 
@@ -146,7 +146,7 @@
 </div>
 
 <footer class="text-center text-muted py-3">
-    &copy; {{ date('Y') }} PAUD Birrul Walidin
+    &copy; {{ date('Y') }} PAUD Birrul Walidain
 </footer>
 
 </body>

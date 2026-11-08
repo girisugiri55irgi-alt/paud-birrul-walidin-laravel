@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard Pendidik - TK PAUD Birrul Walidin</title>
+    <title>Dashboard Pendidik - TK PAUD Birrul Walidain</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet">
@@ -231,7 +231,7 @@
 
         <div class="brand-title">
             TK PAUD<br>
-            Birrul Walidin
+            Birrul Walidain
             <div class="small fw-normal mt-1">Portal Pendidik</div>
         </div>
     </div>
@@ -332,7 +332,7 @@
                     <h2>{{ auth()->user()->name }}</h2>
                     <p class="mb-0">
                         Mari pantau perkembangan, pembelajaran, dan pencapaian
-                        setiap anak bersama TK PAUD Birrul Walidin.
+                        setiap anak bersama TK PAUD Birrul Walidain.
                     </p>
                 </div>
 
@@ -506,7 +506,7 @@
     </div>
 
     <footer>
-        &copy; {{ date('Y') }} TK PAUD Birrul Walidin.
+        &copy; {{ date('Y') }} TK PAUD Birrul Walidain.
         Sistem Monitoring Perkembangan dan Evaluasi Belajar Anak Usia Dini.
     </footer>
 

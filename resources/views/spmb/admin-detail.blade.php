@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Detail Pendaftar SPMB - TK PAUD Birrul Walidin</title>
+    <title>Detail Pendaftar SPMB - TK PAUD Birrul Walidain</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet">
@@ -65,7 +65,7 @@
                  alt="Logo Sekolah"
                  class="school-logo me-2">
 
-            <span>TK PAUD Birrul Walidin</span>
+            <span>TK PAUD Birrul Walidain</span>
         </a>
 
         <a href="{{ url('/admin/spmb') }}"
@@ -297,7 +297,7 @@
     </div>
 
     <div class="text-center text-muted small mt-4">
-        TK PAUD Birrul Walidin &copy; {{ date('Y') }}
+        TK PAUD Birrul Walidain &copy; {{ date('Y') }}
     </div>
 
 </div>

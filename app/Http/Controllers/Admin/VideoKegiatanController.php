@@ -3,63 +3,78 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\VideoKegiatan;
 use Illuminate\Http\Request;
 
 class VideoKegiatanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $videos = VideoKegiatan::with('pembuat')
+            ->latest()
+            ->paginate(10);
+
+        return view('admin.konten.video.index', compact('videos'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('admin.konten.video.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'nullable|string',
+            'url_video' => 'required|url|max:255',
+            'is_published' => 'nullable|boolean',
+        ]);
+
+        $validated['is_published'] = $request->boolean('is_published');
+        $validated['user_id'] = auth()->id();
+
+        VideoKegiatan::create($validated);
+
+        return redirect()
+            ->route('admin.konten.video.index')
+            ->with('success', 'Video kegiatan berhasil ditambahkan.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show(VideoKegiatan $video)
     {
-        //
+        return view('admin.konten.video.show', compact('video'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function edit(VideoKegiatan $video)
     {
-        //
+        return view('admin.konten.video.edit', compact('video'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, VideoKegiatan $video)
     {
-        //
+        $validated = $request->validate([
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'nullable|string',
+            'url_video' => 'required|url|max:255',
+            'is_published' => 'nullable|boolean',
+        ]);
+
+        $validated['is_published'] = $request->boolean('is_published');
+
+        $video->update($validated);
+
+        return redirect()
+            ->route('admin.konten.video.index')
+            ->with('success', 'Video kegiatan berhasil diperbarui.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy(VideoKegiatan $video)
     {
-        //
+        $video->delete();
+
+        return redirect()
+            ->route('admin.konten.video.index')
+            ->with('success', 'Video kegiatan berhasil dihapus.');
     }
 }

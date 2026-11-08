@@ -15,7 +15,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
             <h2>Kelola Materi Pembelajaran</h2>
-            <p class="text-muted mb-0">PAUD Birrul Walidin</p>
+            <p class="text-muted mb-0">PAUD Birrul Walidain</p>
         </div>
 
         <a href="{{ route('materi.create') }}" class="btn btn-primary">

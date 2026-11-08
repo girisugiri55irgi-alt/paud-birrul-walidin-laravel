@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cek Status SPMB - PAUD Birrul Walidin</title>
+    <title>Cek Status SPMB - PAUD Birrul Walidain</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -33,7 +33,7 @@
 <body>
 
 <header class="header">
-    <h2>PAUD Birrul Walidin</h2>
+    <h2>PAUD Birrul Walidain</h2>
     <p class="mb-0">Pengecekan Status Pendaftaran Murid Baru</p>
 </header>
 
@@ -80,7 +80,7 @@
 </div>
 
 <footer class="text-center text-muted py-3">
-    &copy; {{ date('Y') }} PAUD Birrul Walidin
+    &copy; {{ date('Y') }} PAUD Birrul Walidain
 </footer>
 
 </body>

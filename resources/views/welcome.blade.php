@@ -16,16 +16,31 @@
             --teks: #34466a;
         }
 
-        * { box-sizing: border-box; }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: var(--teks);
-            background: var(--latar);
-            font-size: 14px;
+        * {
+            box-sizing: border-box;
         }
 
+        /* BACKGROUND FOTO HALAMAN UTAMA */
+       body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--teks);
+    font-size: 14px;
+
+    background-color: #eaf0ff;
+
+    background-image:
+        linear-gradient(
+            rgba(35, 65, 135, 0.35),
+            rgba(35, 65, 135, 0.35)
+        ),
+        url('/images/background-paud.jpeg');
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
         .navbar-utama {
             background: var(--biru);
             min-height: 70px;
@@ -47,8 +62,13 @@
             padding: 2px;
         }
 
-        .navbar-utama .nav-link { color: white; }
-        .navbar-utama .nav-link:hover { color: #e5e9ff; }
+        .navbar-utama .nav-link {
+            color: white;
+        }
+
+        .navbar-utama .nav-link:hover {
+            color: #e5e9ff;
+        }
 
         .navbar-kedua {
             background: white;
@@ -61,7 +81,9 @@
             white-space: nowrap;
         }
 
-        .navbar-kedua .nav-link:hover { color: var(--biru-gelap); }
+        .navbar-kedua .nav-link:hover {
+            color: var(--biru-gelap);
+        }
 
         .konten {
             max-width: 1140px;
@@ -69,11 +91,12 @@
             padding: 0 15px;
         }
 
+        /* KARTU UTAMA */
         .kartu {
-            background: white;
+            background: rgba(255, 255, 255, 0.96);
             border: 0;
-            border-radius: 6px;
-            box-shadow: 0 3px 12px rgba(30, 50, 70, .045);
+            border-radius: 10px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, .12);
             height: 100%;
         }
 
@@ -85,14 +108,18 @@
             font-weight: bold;
         }
 
-        .kartu-body { padding: 24px; }
+        .kartu-body {
+            padding: 24px;
+        }
 
+        /* BANNER SELAMAT DATANG */
         .banner {
-            background: white;
-            padding: 22px;
-            border-radius: 6px;
-            box-shadow: 0 3px 12px rgba(30, 50, 70, .045);
+            background: rgba(255, 255, 255, 0.94);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .12);
             margin-bottom: 30px;
+            backdrop-filter: blur(5px);
         }
 
         .banner h1 {
@@ -156,12 +183,15 @@
             text-decoration: none;
         }
 
-        .kartu-fitur h5 a:hover { text-decoration: underline; }
+        .kartu-fitur h5 a:hover {
+            text-decoration: underline;
+        }
 
         .judul-bagian {
-            color: var(--teks);
+            color: white;
             font-weight: 700;
             margin-bottom: 6px;
+            text-shadow: 0 2px 5px rgba(0,0,0,.35);
         }
 
         .garis-bagian {
@@ -173,10 +203,10 @@
         }
 
         .kartu-konten {
-            background: white;
-            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 3px 12px rgba(30, 50, 70, .06);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, .10);
             height: 100%;
         }
 
@@ -186,7 +216,9 @@
             object-fit: cover;
         }
 
-        .kartu-konten-body { padding: 18px; }
+        .kartu-konten-body {
+            padding: 18px;
+        }
 
         .video-frame {
             width: 100%;
@@ -221,7 +253,14 @@
             border-top: 1px solid #edf0f2;
         }
 
+        /* TAMPILAN HP */
         @media (max-width: 768px) {
+
+            body {
+                background-attachment: scroll;
+                background-position: center center;
+            }
+
             .navbar-utama .navbar-brand {
                 font-size: 14px;
                 letter-spacing: 1px;
@@ -237,8 +276,13 @@
                 font-size: 12px;
             }
 
-            .kartu-body { padding: 18px; }
-            .banner { padding: 18px; }
+            .kartu-body {
+                padding: 18px;
+            }
+
+            .banner {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -408,8 +452,8 @@
 
         <!-- LAYANAN WEBSITE -->
         <section class="mt-5" id="layanan">
-            <h3 class="h4 fw-semibold mb-1">Layanan Website</h3>
-            <p class="text-secondary">Pilih layanan sesuai kebutuhan Anda.</p>
+            <h3 class="h4 fw-semibold mb-1 text-white">Layanan Website</h3>
+            <p class="text-white">Pilih layanan sesuai kebutuhan Anda.</p>
 
             <div class="row g-3 mt-1">
                 <div class="col-md-6 col-lg-4">
@@ -469,7 +513,7 @@
         <!-- GALERI FOTO -->
         <section class="mt-5" id="galeri">
             <h3 class="h4 judul-bagian">Galeri Foto Kegiatan</h3>
-            <p class="text-secondary">Dokumentasi kegiatan TK PAUD Birrul Walidain.</p>
+            <p class="text-white">Dokumentasi kegiatan TK PAUD Birrul Walidain.</p>
             <div class="garis-bagian"></div>
 
             <div class="row g-4">
@@ -508,7 +552,7 @@
         <!-- VIDEO KEGIATAN -->
         <section class="mt-5" id="video">
             <h3 class="h4 judul-bagian">Video Kegiatan Sekolah</h3>
-            <p class="text-secondary">Video pembelajaran dan kegiatan sekolah.</p>
+            <p class="text-white">Video pembelajaran dan kegiatan sekolah.</p>
             <div class="garis-bagian"></div>
 
             <div class="row g-4">
@@ -561,7 +605,7 @@
         <!-- INFORMASI SEKOLAH -->
         <section class="mt-5" id="informasi">
             <h3 class="h4 judul-bagian">Informasi Sekolah</h3>
-            <p class="text-secondary">Berita dan informasi terbaru dari sekolah.</p>
+            <p class="text-white">Berita dan informasi terbaru dari sekolah.</p>
             <div class="garis-bagian"></div>
 
             <div class="row g-4">
@@ -604,7 +648,7 @@
         <!-- AGENDA SEKOLAH -->
         <section class="mt-5" id="agenda">
             <h3 class="h4 judul-bagian">Agenda Kegiatan Sekolah</h3>
-            <p class="text-secondary">Jadwal kegiatan TK PAUD Birrul Walidain.</p>
+            <p class="text-white">Jadwal kegiatan TK PAUD Birrul Walidain.</p>
             <div class="garis-bagian"></div>
 
             <div class="row g-3">

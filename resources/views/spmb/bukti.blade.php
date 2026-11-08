@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bukti Pendaftaran SPMB - PAUD Birrul Walidin</title>
+    <title>Bukti Pendaftaran SPMB - PAUD Birrul Walidain</title>
 
     <style>
         * {
@@ -144,10 +144,10 @@
     <div class="header">
     <img
         src="{{ asset('images/logo-paud.jpg') }}"
-        alt="Logo TK PAUD Birrul Walidin"
+        alt="Logo TK PAUD Birrul Walidain"
         class="logo-sekolah"
     >
-        <h2>TK PAUD BIRRUL WALIDIN</h2>
+        <h2>TK PAUD BIRRUL WALIDAIN</h2>
         <h3>BUKTI PENDAFTARAN MURID BARU</h3>
         <p>Sistem Penerimaan Murid Baru (SPMB)</p>
     </div>
