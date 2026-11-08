@@ -1,59 +1,187 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Website PAUD Birrul Walidain
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Sistem Informasi dan Website Resmi PAUD Birrul Walidain**
 
-## About Laravel
+Website PAUD Birrul Walidain merupakan aplikasi berbasis web yang dikembangkan untuk mendukung penyampaian informasi sekolah, pengelolaan kegiatan pembelajaran, administrasi sekolah, serta komunikasi antara pihak sekolah dan orang tua peserta didik.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Aplikasi ini dibangun menggunakan framework Laravel dengan tujuan meningkatkan efektivitas pengelolaan informasi dan pelayanan pendidikan anak usia dini secara digital.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🎯 Tujuan Pengembangan
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Menyediakan media informasi resmi sekolah yang mudah diakses.
+2. Mempermudah pengelolaan data dan informasi sekolah.
+3. Mendukung kegiatan pembelajaran melalui fitur materi dan tugas.
+4. Mempermudah orang tua dalam memperoleh informasi perkembangan dan kegiatan anak.
+5. Menyediakan layanan pendaftaran peserta didik baru secara online.
+6. Mendukung digitalisasi administrasi dan pengelolaan konten sekolah.
 
-## Learning Laravel
+## ✨ Fitur Website
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 1. Halaman Utama
+- Profil dan informasi sekolah.
+- Informasi kegiatan sekolah.
+- Galeri foto kegiatan.
+- Video kegiatan sekolah.
+- Informasi agenda sekolah.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 2. Manajemen Pengguna
+- Login dan autentikasi pengguna.
+- Dashboard administrator.
+- Dashboard pendidik.
+- Dashboard orang tua.
+- Pengelolaan hak akses pengguna.
 
-## Laravel Sponsors
+### 3. Pengelolaan Pembelajaran
+- Pengelolaan materi pembelajaran.
+- Pengelolaan tugas peserta didik.
+- Informasi dan evaluasi pembelajaran.
+- Pengelolaan informasi akademik.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 4. Informasi dan Konten Sekolah
+- Pengelolaan berita dan informasi.
+- Pengelolaan agenda sekolah.
+- Pengelolaan galeri foto.
+- Pengelolaan video kegiatan.
 
-### Premium Partners
+### 5. Sistem Penerimaan Murid Baru (SPMB)
+- Informasi pendaftaran peserta didik baru.
+- Formulir pendaftaran online.
+- Pengecekan status pendaftaran.
+- Informasi hasil pendaftaran.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠️ Teknologi yang Digunakan
 
-## Contributing
+| Teknologi | Kegunaan |
+|---|---|
+| PHP | Bahasa pemrograman backend |
+| Laravel 12 | Framework aplikasi |
+| MySQL / MariaDB | Database |
+| HTML5 | Struktur halaman |
+| CSS3 | Tampilan website |
+| JavaScript | Interaksi halaman |
+| Bootstrap 5 | Framework antarmuka |
+| Composer | Manajemen dependensi PHP |
+| Git & GitHub | Pengelolaan versi kode |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📁 Struktur Project
 
-## Code of Conduct
+```text
+paud-birrul-walidin-laravel/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+│   └── views/
+├── routes/
+├── storage/
+├── tests/
+├── .gitignore
+├── artisan
+├── composer.json
+├── package.json
+└── README.md
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## ⚙️ Instalasi Project
 
-## Security Vulnerabilities
+### Persyaratan
+- PHP sesuai persyaratan Laravel 12.
+- Composer.
+- MySQL atau MariaDB.
+- Node.js dan NPM.
+- Web server Apache atau Nginx.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Langkah Instalasi
 
-## License
+1. Clone repository:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+git clone https://github.com/girisugiri55irgi-alt/paud-birrul-walidin-laravel.git
+```
+
+2. Masuk ke folder project:
+
+```bash
+cd paud-birrul-walidin-laravel
+```
+
+3. Install dependensi Laravel:
+
+```bash
+composer install
+```
+
+4. Salin file konfigurasi:
+
+```bash
+copy .env.example .env
+```
+
+5. Buat application key:
+
+```bash
+php artisan key:generate
+```
+
+6. Atur konfigurasi database pada file `.env`.
+
+7. Jalankan migrasi database:
+
+```bash
+php artisan migrate
+```
+
+8. Buat symbolic link penyimpanan:
+
+```bash
+php artisan storage:link
+```
+
+9. Install dependensi frontend:
+
+```bash
+npm install
+npm run build
+```
+
+10. Jalankan aplikasi:
+
+```bash
+php artisan serve
+```
+
+Buka browser dan akses:
+
+```text
+http://127.0.0.1:8000
+```
+
+## 🔐 Keamanan
+
+- File konfigurasi `.env` tidak boleh dipublikasikan.
+- Password pengguna harus dikelola dengan aman.
+- Hak akses pengguna disesuaikan dengan peran masing-masing.
+- Pengelolaan data harus memperhatikan keamanan dan privasi peserta didik.
+
+## 🚀 Pengembangan Selanjutnya
+
+Beberapa pengembangan yang dapat dilakukan:
+- Penyempurnaan sistem laporan perkembangan peserta didik.
+- Pengembangan notifikasi informasi kepada orang tua.
+- Peningkatan fitur evaluasi pembelajaran.
+- Pengembangan laporan administrasi sekolah.
+- Optimalisasi keamanan dan performa aplikasi.
+
+## 👨‍💻 Pengembang
+
+**Project:** Website PAUD Birrul Walidain  
+**Platform:** Web Application  
+**Framework:** Laravel 12  
+**Repository:** [GitHub - PAUD Birrul Walidain](https://github.com/girisugiri55irgi-alt/paud-birrul-walidin-laravel)
+
+---
+
+*Website PAUD Birrul Walidain dikembangkan sebagai upaya mendukung digitalisasi layanan informasi dan administrasi pendidikan anak usia dini.*
+
